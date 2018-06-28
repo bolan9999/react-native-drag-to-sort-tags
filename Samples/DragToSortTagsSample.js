@@ -1,9 +1,10 @@
-/**
- * Author: Shi(bolan0000@icloud.com)
- * Date: 2018/6/9
- * Copyright (c) 2018, AoTang, Inc.
+/*
  *
- * Description: DragToSortTags测试组件
+ * Created by Stone
+ * https://github.com/bolan9999
+ * Email: shanshang130@gmail.com
+ * Date: 2018/6/9
+ *
  */
 
 import React from "react";
@@ -13,7 +14,7 @@ import { DragToSortTags } from "../lib";
 export class DragToSortTagsSample extends React.Component{
   render() {
     const tags = [];
-    for (let i = 0; i < 15; ++i) {
+    for (let i = 0; i < 30; ++i) {
       tags.push("Tag " + i);
     }
     return (

@@ -82,7 +82,9 @@ export function registerScreens() {
 ```
 
 ## Usage
-示例：
+
+### 示例：
+
 ```$xslt
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
@@ -131,6 +133,8 @@ const styles = StyleSheet.create({
 });
 ```
 
+### 属性
+
 属性  |  类型  |  默认值  |  作用  
 ---- | ------ | --------- | --------
 tags | string[] | **必须** | 显示的所有标签
@@ -147,6 +151,17 @@ maxCountSelectable | number | 0 | 最大可选择的标签数量（0表示无限
 vibration | number | 40 | 长按时的震动反馈时长，<=0表示不震动（该功能在安卓上需要配置权限）
 initSelectedTags | string[] | [] | 初始化选中的标签
 longPressResponseTime | number | 500 | 长按最小响应时长(浩渺)
+
+### 方法：
+
+*getSortedTags(): string[];*
+
+获取已经当前所有标签的排序顺序
+
+*getSelectedTags(): string[]*
+
+获取当前选择的标签（已排序）
+
 
 ## 注意事项
 * vibration 在安卓上需要配置权限：在AndroidManifest.xml中添加下面的代码
