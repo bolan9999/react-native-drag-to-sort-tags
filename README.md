@@ -150,7 +150,7 @@ onSelectChange | (selectedTags: string[]) => any | ()=>null | 选中标签或其
 maxCountSelectable | number | 0 | 最大可选择的标签数量（0表示无限制）
 vibration | number | 40 | 长按时的震动反馈时长，<=0表示不震动（该功能在安卓上需要配置权限）
 initSelectedTags | string[] | [] | 初始化选中的标签
-longPressResponseTime | number | 500 | 长按最小响应时长(浩渺)
+longPressResponseTime | number | 500 | 长按最小响应时长(毫秒)
 
 ### 方法：
 
@@ -158,7 +158,7 @@ longPressResponseTime | number | 500 | 长按最小响应时长(浩渺)
 
 获取已经当前所有标签的排序顺序
 
-*getSelectedTags(): string[]*
+*getSelectedTags(): string[];*
 
 获取当前选择的标签（已排序）
 
@@ -174,7 +174,7 @@ longPressResponseTime | number | 500 | 长按最小响应时长(浩渺)
    1. 目前暂时只支持等宽且等高的标签元素。
    2. renderTag返回的顶层元素是没有实际意义的，最终会将其属性全部转化到一个可以支持同时手势的BaseButton上面。
    3. renderTag的顶层元素的样式中，margin系列值均无效，需要设置margin的话，请通过设置DragToSortTags的marginHorizontal和marginVertical属性
-   4. renderTag的顶层元素的样式中，transform和zIndex属性均是无效的，该属性已经用于制作拖动动画
+   4. renderTag的顶层元素的样式中，transform，ref，onLayout和zIndex属性均是无效的，该属性已经用于制作拖动动画
    5. BaseButton现行版本中存在一个bug：borderRadius在Android上单位错误，所以本库开启了一个修复选项fixBorderRadiusOnAndroid。如果react-native-gesture-handler在未来的版本修复了这个问题，您可以手动关闭这个修复功能。
    6. BaseButton现行版本borderWith无效
  
